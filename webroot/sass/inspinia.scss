@@ -1,0 +1,37 @@
+// Prepend Bootstrap
+	@import "../plugins/bootstrap/3.3.7_sass/stylesheets/bootstrap";
+
+// BaseKit Admin Main Stylesheet 
+
+	@import "../plugins/bootstrap/3.3.7_sass/stylesheets/bootstrap/variables";
+	@import "../plugins/bootstrap/3.3.7_sass/stylesheets/bootstrap/mixins";
+	
+	@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+	@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
+
+	// INSPINIA Theme Elements
+	@import "colors";
+	@import "typography";
+	@import "navigation";
+	@import "top_navigation";
+	@import "buttons";
+	@import "badges_labels";
+	@import "elements";
+	@import "sidebar";
+	@import "base";
+	@import "pages";
+
+	// RTL Support
+	//@import "rtl";
+
+	// For demo only - config box style
+	//@import "theme-config";
+
+	// Skins
+	@import "skins";
+
+	// Media queries
+	@import "media";
+
+	// Custom styles used to override base styles
+	@import "custom";

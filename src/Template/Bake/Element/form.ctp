@@ -1,0 +1,103 @@
+<%
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         0.1.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+use Cake\Utility\Inflector;
+
+$fields = collection($fields)
+    ->filter(function($field) use ($schema) {
+        return $schema->columnType($field) !== 'binary';
+    });
+
+if (isset($modelObject) && $modelObject->behaviors()->has('Tree')) {
+    $fields = $fields->reject(function ($field) {
+        return $field === 'lft' || $field === 'rght';
+    });
+}
+%>
+<?php $this->assign('title', __('<%= Inflector::humanize($action) %> <%= $singularHumanName %>')); ?>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5><?= __('<%= Inflector::humanize($action) %> <%= $singularHumanName %>') ?></h5>
+            </div>
+            <div class="ibox-content">
+
+
+
+                <?= $this->Form->create($<%= $singularVar %>, ['align' => [
+                    'sm' => [
+                        'left' => 2,
+                        'middle' => 10,
+                        'right' => 12
+                    ],
+                    'md' => [
+                        'left' => 2,
+                        'middle' => 10,
+                        'right' => 4
+                    ]
+                ]]) ?>
+                <?php
+        <%
+                foreach ($fields as $field) {
+                    if (in_array($field, $primaryKey)) {
+                        continue;
+                    }
+                    if (isset($keyFields[$field])) {
+                        $fieldData = $schema->column($field);
+                        if (!empty($fieldData['null'])) {
+        %>
+                    echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>, 'empty' => true]);
+        <%
+                        } else {
+        %>
+                    echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>]);
+        <%
+                        }
+                        continue;
+                    }
+                    if (!in_array($field, ['created', 'modified', 'updated'])) {
+                        $fieldData = $schema->column($field);
+                        if (in_array($fieldData['type'], ['date', 'datetime', 'time']) && (!empty($fieldData['null']))) {
+        %>
+                    echo $this->Form->input('<%= $field %>', ['empty' => true]);
+        <%
+                        } else {
+        %>
+                    echo $this->Form->input('<%= $field %>');
+        <%
+                        }
+                    }
+                }
+                if (!empty($associations['BelongsToMany'])) {
+                    foreach ($associations['BelongsToMany'] as $assocName => $assocData) {
+        %>
+                    echo $this->Form->input('<%= $assocData['property'] %>._ids', ['options' => $<%= $assocData['variable'] %>]);
+        <%
+                    }
+                }
+        %>
+                ?>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <?= $this->Form->submit('Save', ['class' => 'btn-primary']); ?>
+                </div>
+                <?= $this->Form->end() ?>
+          
+
+
+            </div>
+        </div>
+    </div>
+</div>

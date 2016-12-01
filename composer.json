@@ -1,0 +1,24 @@
+{
+    "name": "kingloui/cakephp-basekit-theme-inspinia",
+    "description": "Inspinia Theme for CakePHP BaseKit",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.5.9",
+        "cakephp/cakephp": ">=3.3.2 <4.0.0",
+        "friendsofcake/bootstrap-ui": "^0.5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "KingLoui\\BaseKitThemeInspinia\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KingLoui\\BaseKitThemeInspinia\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
