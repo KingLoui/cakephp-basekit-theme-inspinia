@@ -9,44 +9,44 @@
     // set the classes according to config
      
     // Sidebar
-    if(Configure::read('BaseKitThemeInspinia.Admin.Sidebar.Collapse')) {
+    if(Configure::read('BaseKitThemeInspinia.Sidebar.Collapse')) {
         // collapsed menu
         array_push($bodyClasses, 'mini-navbar');
     }
-    if(Configure::read('BaseKitThemeInspinia.Admin.Sidebar.Fixed')) {
+    if(Configure::read('BaseKitThemeInspinia.Sidebar.Fixed')) {
         // fixed sidebar
         array_push($bodyClasses, 'fixed-sidebar');
     }
-    if(Configure::check('BaseKitThemeInspinia.Admin.Sidebar.ShowHideEffect')) {
+    if(Configure::check('BaseKitThemeInspinia.Sidebar.ShowHideEffect')) {
         // show/hide effects
-        if(Configure::read('BaseKitThemeInspinia.Admin.Sidebar.ShowHideEffect') == 'push')
+        if(Configure::read('BaseKitThemeInspinia.Sidebar.ShowHideEffect') == 'push')
             array_push($bodyClasses, 'sidebar-push');
-        else if(Configure::read('BaseKitThemeInspinia.Admin.Sidebar.ShowHideEffect') == 'reveal')
+        else if(Configure::read('BaseKitThemeInspinia.Sidebar.ShowHideEffect') == 'reveal')
             array_push($bodyClasses, 'sidebar-reveal');  
     }
 
     // NavTop
-    if(Configure::read('BaseKitThemeInspinia.Admin.NavTop.Fixed') 
-        && !Configure::read('BaseKitThemeInspinia.Admin.Boxed')) {
+    if(Configure::read('BaseKitThemeInspinia.NavTop.Fixed') 
+        && !Configure::read('BaseKitThemeInspinia.Boxed')) {
         // fixed topnav , only apply if layout is not boxed
         array_push($bodyClasses, 'fixed-nav');  
         array_push($topNavClasses, 'navbar-fixed-top');  
         // style 2
-        if(!Configure::read('BaseKitThemeInspinia.Admin.NavTop.FixedFullWidth'))
+        if(!Configure::read('BaseKitThemeInspinia.NavTop.FixedFullWidth'))
             array_push($bodyClasses, 'fixed-nav-basic');  
     } else {
         array_push($topNavClasses, 'navbar-static-top');  
     }
 
     // boxed-layout
-    if(Configure::read('BaseKitThemeInspinia.Admin.Boxed')) {
+    if(Configure::read('BaseKitThemeInspinia.Boxed')) {
         array_push($bodyClasses, 'boxed-layout'); 
     }
 
     // skins
-    if(Configure::check('BaseKitThemeInspinia.Admin.Skin')) {
-        if(Configure::read('BaseKitThemeInspinia.Admin.Skin'))
-            array_push($bodyClasses, 'skin-' . Configure::read('BaseKitThemeInspinia.Admin.Skin'));       
+    if(Configure::check('BaseKitThemeInspinia.Skin')) {
+        if(Configure::read('BaseKitThemeInspinia.Skin'))
+            array_push($bodyClasses, 'skin-' . Configure::read('BaseKitThemeInspinia.Skin'));       
     }
 
 
