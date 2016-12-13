@@ -19,10 +19,20 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/css\/inspinia.css.map": {
+	"\/css\/theme.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/theme-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/css\/theme.css.map": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/css\/inspinia.css.map",
+		"oAP": "\/css\/theme.css.map",
 		"oF": 0
 		},
 	"\/fonts\/et-line.eot": {
@@ -585,11 +595,11 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/js\/theme-basekit-admin.js": {
+	"\/js\/theme.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/theme-basekit-admin-min.js",
+		"oAP": "\/js\/min\/theme-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -12644,7 +12654,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/inspinia.scss": {
+	"\/sass\/theme.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -12652,7 +12662,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "\/css\/inspinia.css",
+		"oAP": "\/css\/theme.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -12666,7 +12676,7 @@
 	"creationDate": 499881311,
 	"displayValue": "BaseKitThemeInspinia",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "meme-greg"
+	"iconImageName": "meme-ceiling"
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

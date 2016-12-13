@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "inspinia.css",
+	"file": "theme.css",
 	"sources": [
-		"../sass/inspinia.scss",
+		"../sass/theme.scss",
 		"../plugins/bootstrap/3.3.7_sass/stylesheets/_bootstrap.scss",
 		"../plugins/bootstrap/3.3.7_sass/stylesheets/bootstrap/_variables.scss",
 		"../plugins/bootstrap/3.3.7_sass/stylesheets/bootstrap/_mixins.scss",

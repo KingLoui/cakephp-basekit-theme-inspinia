@@ -9,44 +9,44 @@
     // set the classes according to config
      
     // Sidebar
-    if(Configure::read('BaseKitThemeTwentySixteen.Admin.Sidebar.Collapse')) {
+    if(Configure::read('BaseKitThemeInspinia.Admin.Sidebar.Collapse')) {
         // collapsed menu
         array_push($bodyClasses, 'mini-navbar');
     }
-    if(Configure::read('BaseKitThemeTwentySixteen.Admin.Sidebar.Fixed')) {
+    if(Configure::read('BaseKitThemeInspinia.Admin.Sidebar.Fixed')) {
         // fixed sidebar
         array_push($bodyClasses, 'fixed-sidebar');
     }
-    if(Configure::check('BaseKitThemeTwentySixteen.Admin.Sidebar.ShowHideEffect')) {
+    if(Configure::check('BaseKitThemeInspinia.Admin.Sidebar.ShowHideEffect')) {
         // show/hide effects
-        if(Configure::read('BaseKitThemeTwentySixteen.Admin.Sidebar.ShowHideEffect') == 'push')
+        if(Configure::read('BaseKitThemeInspinia.Admin.Sidebar.ShowHideEffect') == 'push')
             array_push($bodyClasses, 'sidebar-push');
-        else if(Configure::read('BaseKitThemeTwentySixteen.Admin.Sidebar.ShowHideEffect') == 'reveal')
+        else if(Configure::read('BaseKitThemeInspinia.Admin.Sidebar.ShowHideEffect') == 'reveal')
             array_push($bodyClasses, 'sidebar-reveal');  
     }
 
     // NavTop
-    if(Configure::read('BaseKitThemeTwentySixteen.Admin.NavTop.Fixed') 
-        && !Configure::read('BaseKitThemeTwentySixteen.Admin.Boxed')) {
+    if(Configure::read('BaseKitThemeInspinia.Admin.NavTop.Fixed') 
+        && !Configure::read('BaseKitThemeInspinia.Admin.Boxed')) {
         // fixed topnav , only apply if layout is not boxed
         array_push($bodyClasses, 'fixed-nav');  
         array_push($topNavClasses, 'navbar-fixed-top');  
         // style 2
-        if(!Configure::read('BaseKitThemeTwentySixteen.Admin.NavTop.FixedFullWidth'))
+        if(!Configure::read('BaseKitThemeInspinia.Admin.NavTop.FixedFullWidth'))
             array_push($bodyClasses, 'fixed-nav-basic');  
     } else {
         array_push($topNavClasses, 'navbar-static-top');  
     }
 
     // boxed-layout
-    if(Configure::read('BaseKitThemeTwentySixteen.Admin.Boxed')) {
+    if(Configure::read('BaseKitThemeInspinia.Admin.Boxed')) {
         array_push($bodyClasses, 'boxed-layout'); 
     }
 
     // skins
-    if(Configure::check('BaseKitThemeTwentySixteen.Admin.Skin')) {
-        if(Configure::read('BaseKitThemeTwentySixteen.Admin.Skin'))
-            array_push($bodyClasses, 'skin-' . Configure::read('BaseKitThemeTwentySixteen.Admin.Skin'));       
+    if(Configure::check('BaseKitThemeInspinia.Admin.Skin')) {
+        if(Configure::read('BaseKitThemeInspinia.Admin.Skin'))
+            array_push($bodyClasses, 'skin-' . Configure::read('BaseKitThemeInspinia.Admin.Skin'));       
     }
 
 
@@ -90,20 +90,20 @@
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('KingLoui/BaseKitThemeTwentySixteen.basekit-admin.css') ?>
+    <?= $this->Html->css('KingLoui/BaseKitThemeInspinia.theme.css') ?>
 
-    <?= $this->Html->css('KingLoui/BaseKitThemeTwentySixteen./plugins/animate/animate.css') ?>
-    <?= $this->Html->css('KingLoui/BaseKitThemeTwentySixteen./plugins/font-awesome/4.6.3/css/font-awesome.min.css') ?>
+    <?= $this->Html->css('KingLoui/BaseKitThemeInspinia./plugins/animate/animate.css') ?>
+    <?= $this->Html->css('KingLoui/BaseKitThemeInspinia./plugins/font-awesome/4.6.3/css/font-awesome.min.css') ?>
  
     <?php
         $this->prepend('scriptfiles_body', $this->Html->script([
-            'KingLoui/BaseKitThemeTwentySixteen./plugins/jquery/jquery-3.1.0.min.js', 
-            'KingLoui/BaseKitThemeTwentySixteen./plugins/bootstrap/3.3.7_sass/javascripts/bootstrap.min.js',
-            'KingLoui/BaseKitThemeTwentySixteen./plugins/slimscroll/jquery.slimscroll.min.js',
-            'KingLoui/BaseKitThemeTwentySixteen./plugins/metismenu/jquery.metisMenu.js',
-            'KingLoui/BaseKitThemeTwentySixteen./plugins/pace/pace.min.js',
+            'KingLoui/BaseKitThemeInspinia./plugins/jquery/jquery-3.1.0.min.js', 
+            'KingLoui/BaseKitThemeInspinia./plugins/bootstrap/3.3.7_sass/javascripts/bootstrap.min.js',
+            'KingLoui/BaseKitThemeInspinia./plugins/slimscroll/jquery.slimscroll.min.js',
+            'KingLoui/BaseKitThemeInspinia./plugins/metismenu/jquery.metisMenu.js',
+            'KingLoui/BaseKitThemeInspinia./plugins/pace/pace.min.js',
 
-            'KingLoui/BaseKitThemeTwentySixteen.theme-basekit-admin/theme-basekit-admin.js'
+            'KingLoui/BaseKitThemeInspinia.theme.js'
         ]));
     ?>
 
@@ -131,7 +131,7 @@
                     </li>
                     <?php $this->start('sidebar') ?>
                     <?= $this->Menu->render('menu_admin',[
-                        'renderer' => '\KingLoui\BaseKitThemeTwentySixteen\Menu\Renderer\AdminMenuRenderer',
+                        'renderer' => '\KingLoui\BaseKitThemeInspinia\Menu\Renderer\AdminMenuRenderer',
                         'currentClass' => 'active',
                         'ancestorClass' => 'active'
                     ]); ?>
@@ -163,7 +163,7 @@
                             <?= $this->Html->link('Home', '/admin'); ?>
                         </li>
                         <?= $this->Menu->render('menu_admin',[
-                            'renderer' => '\KingLoui\BaseKitThemeTwentySixteen\Menu\Renderer\BreadcrumbsRenderer',
+                            'renderer' => '\KingLoui\BaseKitThemeInspinia\Menu\Renderer\BreadcrumbsRenderer',
                             'currentClass' => 'active'
                         ]); ?>
                     </ol>

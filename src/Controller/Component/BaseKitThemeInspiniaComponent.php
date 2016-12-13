@@ -26,19 +26,15 @@ class BaseKitThemeInspiniaComponent extends Component
     public function beforeRender(Event $event) { 
         // basekit admin setup
         if($this->Controller->viewBuilder()->className() != 'Ajax.Ajax') {
-
             if (isset($this->request->params['prefix']) && $this->request->params['prefix'] == 'admin') {
 
                 // load admin theme view
                 $this->Controller->viewBuilder()->className('KingLoui/BaseKitThemeInspinia.Admin');
 
                 // set view vars
-                $this->Controller->set('headerElement', Configure::read('BaseKitThemeInspinia.Admin.Sidebar.HeaderElement'));
-                $this->Controller->set('headerLogo', Configure::read('BaseKitThemeInspinia.Admin.Sidebar.HeaderLogo'));
-                $this->Controller->set('topLinksElement', Configure::read('BaseKitThemeInspinia.Admin.NavTop.TopLinksElement'));
-            } else {
-                // load default theme view
-                $this->Controller->viewBuilder()->className('KingLoui/BaseKitThemeInspinia.Default');
+                $this->Controller->set('headerElement', Configure::read('BaseKitThemeInspinia.Sidebar.HeaderElement'));
+                $this->Controller->set('headerLogo', Configure::read('BaseKitThemeInspinia.Sidebar.HeaderLogo'));
+                $this->Controller->set('topLinksElement', Configure::read('BaseKitThemeInspinia.NavTop.TopLinksElement'));
             }
         }
     }
