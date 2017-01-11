@@ -1,10 +1,10 @@
 // Prepend Bootstrap
-	@import "../plugins/bootstrap/3.3.7_sass/stylesheets/bootstrap";
+	@import "../plugins/bootstrap-sass/assets/stylesheets/bootstrap";
 
-// BaseKit Admin Main Stylesheet 
+// Inspinia Main Stylesheet 
 
-	@import "../plugins/bootstrap/3.3.7_sass/stylesheets/bootstrap/variables";
-	@import "../plugins/bootstrap/3.3.7_sass/stylesheets/bootstrap/mixins";
+	@import "../plugins/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+	@import "../plugins/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 	
 	@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 	@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
@@ -33,5 +33,13 @@
 	// Media queries
 	@import "media";
 
-	// Custom styles used to override base styles
+
+
+// Stylesheets that are not from Theme but get packet to global stylesheet
+
+	@import "../plugins/animate.css/animate.css";
+	@import "../plugins/font-awesome/css/font-awesome.min.css";
+
+// Custom styles used to override base styles
+
 	@import "custom";

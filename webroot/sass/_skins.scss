@@ -19,7 +19,7 @@
 }
 .skin-1 .nav-header {
   background-color: $skin1_color1;
-  background-image: url('../img/theme-basekit-admin/patterns/header-profile-skin-1.png');
+  background-image: url('../img/patterns/header-profile-skin-1.png');
 }
 .skin-1.mini-navbar .nav-second-level {
   background: #3e495f;
@@ -127,7 +127,7 @@ body.skin-2 {
 }
 .skin-2 .nav-header {
   background-color: #23c6c8;
-  background-image: url('../img/theme-basekit-admin/patterns/header-profile-skin-2.png');
+  background-image: url('../img/patterns/header-profile-skin-2.png');
 }
 .skin-2.mini-navbar .nav-second-level {
   background: #ededed;
@@ -281,7 +281,7 @@ body.boxed-layout.skin-3 #wrapper {
 }
 .skin-3 .nav-header {
   background-color: #ecba52;
-  background-image: url('../img/theme-basekit-admin/patterns/header-profile-skin-3.png');
+  background-image: url('../img/patterns/header-profile-skin-3.png');
 }
 .skin-3.mini-navbar .nav-second-level {
   background: #3e2c42;
@@ -379,7 +379,7 @@ body.skin-md {
   background-color: #ffffff;
 }
 .skin-md .nav-header {
-  background: url("../img/theme-basekit-admin/patterns/4.png") no-repeat;
+  background: url("../img/patterns/4.png") no-repeat;
 }
 .skin-md .label,
 .skin-md .badge {
@@ -654,7 +654,7 @@ body.skin-md {
   color: #676a6c;
 }
 .skin-md.top-navigation .nav > li a:hover,
-.skin-md .top-navigation .nav > li a:focus,
+.skin-md.top-navigation .nav > li a:focus,
 .skin-md.top-navigation .nav .open > a,
 .skin-md.top-navigation .nav .open > a:hover,
 .skin-md.top-navigation .nav .open > a:focus {
@@ -724,16 +724,20 @@ body.skin-md {
  *
 */
 
-.skin-7 .btn-primary {
-  background: $skin7_color1;
-  border-color: $skin7_color1;
-  &:hover {
-    background: $skin7_color1_dark;
-    border-color: $skin7_color1_dark;
+.skin-7 {
+  .btn-primary {
+    background: $skin7_color1;
+    border-color: $skin7_color1;
+    &:hover {
+      background: $skin7_color1_dark;
+      border-color: $skin7_color1_dark;
+    }
+  }
+
+  .nav > li.active {
+    border-left: 4px solid $skin7_color1;
+    background: #293846;
   }
 }
 
-.nav > li.active {
-  border-left: 4px solid $skin7_color1;
-  background: #293846;
-}
+

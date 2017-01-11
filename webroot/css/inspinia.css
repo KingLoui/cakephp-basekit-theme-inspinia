@@ -7,8 +7,6 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
-@import url(../plugins/animate.css/animate.css);
-@import url(../plugins/font-awesome/css/font-awesome.min.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5981,7 +5979,7 @@ h5 {
 .nav-header {
   padding: 33px 25px;
   background-color: #2f4050;
-  background-image: url("../img/patterns/header-profile.png"); }
+  background-image: url("../img/theme-basekit-admin/patterns/header-profile.png"); }
 
 .pace-done .nav-header {
   transition: all 0.4s; }
@@ -8774,7 +8772,7 @@ a.forum-item-title:hover {
 .tabs-container .tabs-left > .nav-tabs .active > a:hover,
 .tabs-container .tabs-left > .nav-tabs .active > a:focus {
   border-color: #e7eaec transparent #e7eaec #e7eaec;
-  border-right-color: #ffffff; }
+  *border-right-color: #ffffff; }
 
 .tabs-container .tabs-right > .nav-tabs {
   float: right;
@@ -8790,7 +8788,7 @@ a.forum-item-title:hover {
 .tabs-container .tabs-right > .nav-tabs .active > a:hover,
 .tabs-container .tabs-right > .nav-tabs .active > a:focus {
   border-color: #e7eaec #e7eaec #e7eaec transparent;
-  border-left-color: #ffffff;
+  *border-left-color: #ffffff;
   z-index: 1; }
 
 @media (max-width: 767px) {
@@ -12976,7 +12974,7 @@ body.landing-page {
 
 .skin-1 .nav-header {
   background-color: #0e9aef;
-  background-image: url("../img/patterns/header-profile-skin-1.png"); }
+  background-image: url("../img/theme-basekit-admin/patterns/header-profile-skin-1.png"); }
 
 .skin-1.mini-navbar .nav-second-level {
   background: #3e495f; }
@@ -13079,7 +13077,7 @@ body.skin-2 {
 
 .skin-2 .nav-header {
   background-color: #23c6c8;
-  background-image: url("../img/patterns/header-profile-skin-2.png"); }
+  background-image: url("../img/theme-basekit-admin/patterns/header-profile-skin-2.png"); }
 
 .skin-2.mini-navbar .nav-second-level {
   background: #ededed; }
@@ -13229,7 +13227,7 @@ body.boxed-layout.skin-3 #wrapper {
 
 .skin-3 .nav-header {
   background-color: #ecba52;
-  background-image: url("../img/patterns/header-profile-skin-3.png"); }
+  background-image: url("../img/theme-basekit-admin/patterns/header-profile-skin-3.png"); }
 
 .skin-3.mini-navbar .nav-second-level {
   background: #3e2c42; }
@@ -13323,7 +13321,7 @@ body.skin-md {
   background-color: #ffffff; }
 
 .skin-md .nav-header {
-  background: url("../img/patterns/4.png") no-repeat; }
+  background: url("../img/theme-basekit-admin/patterns/4.png") no-repeat; }
 
 .skin-md .label,
 .skin-md .badge {
@@ -13596,7 +13594,7 @@ body.skin-md {
   color: #676a6c; }
 
 .skin-md.top-navigation .nav > li a:hover,
-.skin-md.top-navigation .nav > li a:focus,
+.skin-md .top-navigation .nav > li a:focus,
 .skin-md.top-navigation .nav .open > a,
 .skin-md.top-navigation .nav .open > a:hover,
 .skin-md.top-navigation .nav .open > a:focus {
@@ -13664,7 +13662,7 @@ body.skin-md {
     background: #9A0C46;
     border-color: #9A0C46; }
 
-.skin-7 .nav > li.active {
+.nav > li.active {
   border-left: 4px solid #C7105C;
   background: #293846; }
 
@@ -13864,12 +13862,4 @@ table.table td.actions {
 table.table.table-nostripes th, table.table.table-nostripes td {
   border: none; }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(20px, 0, 0); }
-  to {
-    opacity: 1;
-    transform: none; } }
-
-/*# sourceMappingURL=theme.css.map */
+/*# sourceMappingURL=inspinia.css.map */
