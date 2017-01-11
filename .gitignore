@@ -13,3 +13,5 @@ Thumbs.db
 # Application specific files
 .sass-cache
 config.codekit
+
+/webroot/plugins
